@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b344850d-fe20-436d-bd10-a7ffbdc9f631" name="Default Changelist" comment="" />
+    <list default="true" id="b344850d-fe20-436d-bd10-a7ffbdc9f631" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZR7cmGvXsT2DSLVfVvp4utdzwe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +40,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -55,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584790134657</updated>
       <workItem from="1584790138510" duration="11090000" />
-      <workItem from="1584803179225" duration="9846000" />
+      <workItem from="1584803179225" duration="11455000" />
     </task>
     <servers />
   </component>
@@ -67,22 +81,26 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="184" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1280.777@0.23.1280.777" timestamp="1584799627994" />
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1584817764675">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1584820484468">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1584817764675" />
-    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1584817764674">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1584820484468" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1584820484467">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1584817764674" />
-    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1584817764674">
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1584820484467" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1584820484467">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1584817764674" />
-    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1584817764675">
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1584820484467" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1584820484467">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1584817764675" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1584820484467" />
+    <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584818951798">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.777@0.23.1280.777" timestamp="1584818951798" />
     <state x="344" y="312" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584802148408">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

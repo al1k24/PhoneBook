@@ -40,7 +40,23 @@ public class App {
     }
 
     private void commandHelp() {
-        System.out.println("**** HELP CMD");
+        System.out.println("Доступные команды:");
+
+        String[][] commands = new String[][] {
+            {"/user_add", "- Добавляет новый контакт"},
+            {"/user_edit", "- Изменяет существующий контакт"},
+            {"/user_remove", "- Удаляет существующий контакт"},
+
+            {"/users_list", "- Выводит список всех контактов"},
+
+            {"/exit", "- Выход из программы"}
+        };
+
+        for(String[] command:commands) {
+            if(Command.isValid(command[0])) {
+                System.out.println(command[0] + " " + command[1]);
+            }
+        }
     }
 
     private void commandAddUser() {
@@ -93,7 +109,11 @@ public class App {
         if(editType != ET_NONE) {
             String input = scanAndGetEditedInput(editType);
 
-            book.editUser(id, editType, input);
+            if(!(book.editUser(id, editType, input))) {
+                System.out.println("Ошибка: * Упс, попробуйте ещё раз.");
+            } else {
+                System.out.println("Данные контакта были обновлены.");
+            }
         }
     }
 
@@ -102,12 +122,12 @@ public class App {
     }
 
     private void showStartMessage() {
+        System.out.println("Добро пожаловать в телефонный справочник.");
         System.out.println("Введите /help, если у вас есть вопросы.");
-        System.out.println("Введите команду:");
     }
 
     private void showEndMessage() {
-        System.out.println("Спасибо за использование нашей телефонной книжки!");
+        System.out.println("Спасибо за использование нашего телефонного справочника!");
     }
 
     private int scanAndGetUserId() {
@@ -130,10 +150,10 @@ public class App {
     }
 
     private String scanAndGetEditedInput(EditType type) {
-
+        System.out.print("Новое значение = ");
 
         Scanner input = new Scanner(System.in);
 
-        return "";
+        return input.hasNext() ? input.next() : "";
     }
 }

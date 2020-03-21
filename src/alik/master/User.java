@@ -16,11 +16,11 @@ public class User {
         this.phone = phone;
     }
 
-    public int getUserId() {
+    public int getId() {
         return id;
     }
 
-    public String getUserName() {
+    public String getName() {
         return name + " " + surname;
     }
 
@@ -29,10 +29,22 @@ public class User {
     }
 
     public String getFullInfo() {
-        return "ID: " + getUserId() + " -> " + getUserName() + " | Phone: " + getPhone();
+        return "ID: " + getId() + " -> " + getName() + " | Phone: " + getPhone();
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public boolean isUserId(int id) {
-        return getUserId() == id;
+        return getId() == id;
     }
 }

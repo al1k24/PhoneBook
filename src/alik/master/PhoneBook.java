@@ -40,9 +40,18 @@ public class PhoneBook {
     }
 
     public boolean editUser(int id, EditType editType, String value) {
+        int index = getUserObjectIndexById(id);
 
+        switch (editType) {
+            case ET_NAME:
+                users.get(index).setName(value); return true;
+            case ET_SURNAME:
+                users.get(index).setSurname(value); return true;
+            case ET_PHONE:
+                users.get(index).setPhone(value); return true;
+        }
 
-        return true;
+        return false;
     }
 
     public boolean hasUser(int id) {
@@ -64,7 +73,7 @@ public class PhoneBook {
     public String showUser(int id) {
         int index = getUserObjectIndexById(id);
 
-        return users.get(index).getUserName();
+        return users.get(index).getName();
     }
 
     private int getUserObjectIndexById(int id) {
