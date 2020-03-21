@@ -1,5 +1,7 @@
 package alik.master;
 
+import java.util.Arrays;
+
 public enum Command {
 
     USER_ADD("/user_add"),
@@ -17,26 +19,16 @@ public enum Command {
         this.cmd = cmd;
     }
 
-    public String getValue() {
-        return cmd;
-    }
-
     public static boolean isExit(String cmd) {
         return cmd.equals(EXIT.getValue());
     }
 
     public static boolean isValid(String cmd) {
-        char firstElement = cmd.charAt(0);
+        return Arrays.stream(Command.values()).
+                anyMatch(command -> cmd.equals(command.getValue()));
+    }
 
-        if(firstElement != '/')
-            return false;
-
-        for(Command c:Command.values()) {
-            if(c.getValue().equals(cmd)) {
-                return true;
-            }
-        }
-
-        return false;
+    public String getValue() {
+        return cmd;
     }
 }

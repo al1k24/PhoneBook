@@ -1,10 +1,30 @@
 package alik.master;
 
+import alik.master.commands.AddEditCommand;
+import alik.master.commands.AddUserCommand;
+import alik.master.commands.CommandExecution;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 
 import static alik.master.EditType.*;
 
 public class App {
+
+    private static final Map<String, String> commandsDescription = new HashMap<>();
+    private static final Map<String, CommandExecution> commandsExecution = new HashMap<>();
+
+    static {
+        commandsDescription.put("/user_add", "- Добавляет новый контакт");
+        commandsDescription.put("/user_edit", "- Изменяет существующий контакт");
+
+
+        commandsExecution.put("/user_add", new AddUserCommand());
+        commandsExecution.put("/user_edit", new AddEditCommand());
+
+    }
 
     PhoneBook book = new PhoneBook(true);
 
@@ -26,37 +46,12 @@ public class App {
     }
 
     private void executeCommand(String cmd) {
-        if (cmd.equals(Command.HELP.getValue())) {
-            commandHelp();
-        } else if (cmd.equals(Command.USER_ADD.getValue())) {
-            commandAddUser();
-        } else if (cmd.equals(Command.USER_EDIT.getValue())) {
-            commandEditUser();
-        } else if (cmd.equals(Command.USER_REMOVE.getValue())) {
-            commandRemoveUser();
-        } else if (cmd.equals(Command.USERS_LIST.getValue())) {
-            commandAllUsers();
-        }
+        Optional.ofNullable(commandsExecution.get(cmd)).ifPresentOrElse((CommandExecution::execute),()-> System.out.println("nahui"));
     }
 
     private void commandHelp() {
         System.out.println("Доступные команды:");
-
-        String[][] commands = new String[][] {
-            {"/user_add", "- Добавляет новый контакт"},
-            {"/user_edit", "- Изменяет существующий контакт"},
-            {"/user_remove", "- Удаляет существующий контакт"},
-
-            {"/users_list", "- Выводит список всех контактов"},
-
-            {"/exit", "- Выход из программы"}
-        };
-
-        for(String[] command:commands) {
-            if(Command.isValid(command[0])) {
-                System.out.println(command[0] + " " + command[1]);
-            }
-        }
+        commandsDescription.entrySet().stream().forEach(entry-> System.out.println(entry.getKey() + " " + entry.getValue()));
     }
 
     private void commandAddUser() {
