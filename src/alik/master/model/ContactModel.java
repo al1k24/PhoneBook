@@ -1,12 +1,12 @@
 package alik.master.model;
 
-public class Contact {
+public class ContactModel {
 
     private String name;
     private String surname;
     private String phone;
 
-    public Contact(String name, String surname, String phone) {
+    public ContactModel(String name, String surname, String phone) {
         this.name = name;
         this.surname = surname;
         this.phone = phone;

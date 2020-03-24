@@ -5,7 +5,7 @@ import alik.master.model.PhoneBookModel;
 
 import java.util.Scanner;
 
-public class PhoneBookService extends PhoneBookModel {
+public class PhoneBook extends PhoneBookModel {
 
     static {
         contacts.put(++id, new ContactModel("Илюха", "Сеньор", "777"));
@@ -14,14 +14,14 @@ public class PhoneBookService extends PhoneBookModel {
     }
 
     public static void start() {
-        System.out.println("Введи команду:");
+        System.out.println("* Введи /help, если у вас есть вопросы!");
 
         String cmd;
         do {
             Scanner input = new Scanner(System.in);
 
-            CommandService.executeCommand((cmd = input.next()));
-        } while (!CommandService.isExitCommand(cmd));
+            Command.executeCommand((cmd = input.next()));
+        } while (!Command.isExitCommand(cmd));
     }
 
     public static boolean addContact(String name, String surname, String phone) {
@@ -35,6 +35,28 @@ public class PhoneBookService extends PhoneBookModel {
 
     public static boolean removeContact(int id) {
         return contacts.remove(id) != null;
+    }
+
+    public static boolean editContact(int id, int choice, String value) {
+        if (value.isEmpty())
+            return false;
+
+        ContactModel contact = contacts.get(id);
+        switch (choice) {
+            case 1:
+                contact.setName(value);
+                break;
+            case 2:
+                contact.setSurname(value);
+                break;
+            case 3:
+                contact.setPhone(value);
+                break;
+        }
+
+        contacts.put(id, contact);
+
+        return true;
     }
 
     public static boolean isValidContact(int id) {

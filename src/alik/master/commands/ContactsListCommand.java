@@ -1,19 +1,15 @@
 package alik.master.commands;
 
-import alik.master.model.Contact;
+import alik.master.model.ContactModel;
 import alik.master.service.PhoneBook;
 
-import java.util.ArrayList;
+import java.util.Map;
 
-public class UsersListCommand implements CommandExecution {
+public class ContactsListCommand implements CommandExecution {
 
     @Override
     public void execute() {
-        PhoneBook pb = new PhoneBook();
-
-        ArrayList<Contact> contacts = pb.getContacts();
-        for (Contact contact : contacts) {
-            System.out.println("ID: " + contact.getId() + " | " + contact.getFullName() + " Tel: " + contact.getPhone());
-        }
+        Map<Integer, ContactModel> contacts = PhoneBook.getContacts();
+        contacts.forEach((id, contact) -> System.out.println("ID: " + id + " | " + contact.getFullName() + " Tel: " + contact.getPhone()));
     }
 }

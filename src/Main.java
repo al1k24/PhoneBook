@@ -1,10 +1,8 @@
-import alik.master.*;
+import alik.master.service.PhoneBook;
 
 public class Main {
 
     public static void main(String[] args) {
-        App phoneBook = new App();
-
-        phoneBook.start();
+        PhoneBook.start();
     }
 }

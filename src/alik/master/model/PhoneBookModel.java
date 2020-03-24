@@ -3,13 +3,13 @@ package alik.master.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PhoneBook {
+public class PhoneBookModel {
 
     protected static int id;
 
-    protected static final Map<Integer, Contact> contacts = new HashMap<>();
+    protected static final Map<Integer, ContactModel> contacts = new HashMap<>();
 
-    public static Map<Integer, Contact> getContacts() {
+    public static Map<Integer, ContactModel> getContacts() {
         return contacts;
     }
 }

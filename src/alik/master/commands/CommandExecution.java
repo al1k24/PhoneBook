@@ -1,4 +1,4 @@
-package alik.master.model;
+package alik.master.commands;
 
 public interface CommandExecution {
 
