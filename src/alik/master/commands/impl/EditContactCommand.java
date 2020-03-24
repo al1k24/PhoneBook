@@ -1,6 +1,7 @@
-package alik.master.commands;
+package alik.master.commands.impl;
 
-import alik.master.service.PhoneBook;
+import alik.master.commands.CommandExecution;
+import alik.master.service.PhoneBookService;
 
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class EditContactCommand implements CommandExecution {
 
         int id = input.nextInt();
 
-        if (!PhoneBook.isValidContact(id)) {
+        if (!PhoneBookService.isValidContact(id)) {
             System.out.println("* Такой контакт не найден!");
             return;
         }
@@ -54,7 +55,7 @@ public class EditContactCommand implements CommandExecution {
 
         input = new Scanner(System.in);
 
-        if (PhoneBook.editContact(id, choice, input.next())) {
+        if (PhoneBookService.editContact(id, choice, input.next())) {
             System.out.println("* Контакт изменен.");
         } else {
             System.out.println("* Что-то пошло не так!");

@@ -1,16 +1,25 @@
 package alik.master.service;
 
-import alik.master.model.ContactModel;
-import alik.master.model.PhoneBookModel;
+import alik.master.model.Contact;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-public class PhoneBook extends PhoneBookModel {
+public class PhoneBookService {
+
+    private static int id;
+
+    private static final Map<Integer, Contact> contacts = new HashMap<>();
+
+    public static Map<Integer, Contact> getContacts() {
+        return contacts;
+    }
 
     static {
-        contacts.put(++id, new ContactModel("Илюха", "Сеньор", "777"));
-        contacts.put(++id, new ContactModel("Витя", "Джуниор", "000"));
-        contacts.put(++id, new ContactModel("Алик", "Ученик", "444"));
+        contacts.put(++id, new Contact("Илюха", "Сеньор", "777"));
+        contacts.put(++id, new Contact("Витя", "Джуниор", "000"));
+        contacts.put(++id, new Contact("Алик", "Ученик", "444"));
     }
 
     public static void start() {
@@ -20,15 +29,15 @@ public class PhoneBook extends PhoneBookModel {
         do {
             Scanner input = new Scanner(System.in);
 
-            Command.executeCommand((cmd = input.next()));
-        } while (!Command.isExitCommand(cmd));
+            CommandService.executeCommand((cmd = input.next()));
+        } while (!CommandService.isExitCommand(cmd));
     }
 
     public static boolean addContact(String name, String surname, String phone) {
         if (name.isEmpty() || surname.isEmpty() || phone.isEmpty())
             return false;
 
-        contacts.put(++id, new ContactModel(name, surname, phone));
+        contacts.put(++id, new Contact(name, surname, phone));
 
         return true;
     }
@@ -41,7 +50,7 @@ public class PhoneBook extends PhoneBookModel {
         if (value.isEmpty())
             return false;
 
-        ContactModel contact = contacts.get(id);
+        Contact contact = contacts.get(id);
         switch (choice) {
             case 1:
                 contact.setName(value);

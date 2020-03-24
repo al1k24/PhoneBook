@@ -1,11 +1,22 @@
 package alik.master.service;
 
-import alik.master.commands.*;
-import alik.master.model.CommandModel;
+import alik.master.commands.CommandExecution;
+import alik.master.commands.impl.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
-public class Command extends CommandModel {
+public class CommandService {
+
+    private static final String EXIT_COMMAND = "/exit";
+
+    private static final Map<String, String> commandsDescription = new HashMap<>();
+    private static final Map<String, CommandExecution> commandsExecution = new HashMap<>();
+
+    public static Map<String, String> getCommandsDescription() {
+        return commandsDescription;
+    }
 
     static {
         commandsDescription.put("/user_add", "- Добавляет новый контакт.");

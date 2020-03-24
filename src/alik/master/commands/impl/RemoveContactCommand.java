@@ -1,6 +1,7 @@
-package alik.master.commands;
+package alik.master.commands.impl;
 
-import alik.master.service.PhoneBook;
+import alik.master.commands.CommandExecution;
+import alik.master.service.PhoneBookService;
 
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class RemoveContactCommand implements CommandExecution {
             return;
         }
 
-        if (PhoneBook.removeContact(input.nextInt())) {
+        if (PhoneBookService.removeContact(input.nextInt())) {
             System.out.println("* Контакт удален.");
         } else {
             System.out.println("* Такой контакт не найден!");

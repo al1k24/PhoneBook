@@ -2,28 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b344850d-fe20-436d-bd10-a7ffbdc9f631" name="Default Changelist" comment="Update edit user function">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PhoneBook/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/EditType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/PhoneBook$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/PhoneBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PhoneBook/alik/master/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/AddContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/AddContactCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/CommandExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/CommandExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/ContactsListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/ContactsListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/EditContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/EditContactCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/RemoveContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/RemoveContactCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/model/CommandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/CommandModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/model/ContactModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/ContactModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/model/PhoneBookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/PhoneBookModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/service/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/service/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alik/master/service/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/service/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/AddContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/impl/AddContactCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/ContactsListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/impl/ContactsListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/EditContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/impl/EditContactCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/impl/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/commands/RemoveContactCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/commands/impl/RemoveContactCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/model/CommandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/model/ContactModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/model/PhoneBookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/model/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/service/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/service/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alik/master/service/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alik/master/service/PhoneBookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +93,8 @@
       <workItem from="1584831234858" duration="607000" />
       <workItem from="1584897725661" duration="3382000" />
       <workItem from="1585063621297" duration="16965000" />
-      <workItem from="1585082430330" duration="491000" />
+      <workItem from="1585082430330" duration="874000" />
+      <workItem from="1585084729356" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="Update edit user function">
       <created>1584820562542</created>
@@ -159,10 +150,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="122" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.777@0.23.1280.777" timestamp="1585080264692" />
-    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585065979841">
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585085878319">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1585065979841" />
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1585085878319" />
     <state x="0" y="23" width="833" height="777" key="CommitChangelistDialog2" timestamp="1584820605977">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -171,22 +162,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="100" y="123" width="1080" height="577" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1584831458404" />
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1585082426168">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1585085521075">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585082426168" />
-    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1585082426167">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585085521075" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1585085521075">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1585082426167" />
-    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1585082426167">
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1585085521075" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1585085521074">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1585082426167" />
-    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1585082426168">
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1585085521074" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1585085521075">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1585082426168" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1585085521075" />
     <state x="141" y="23" key="SettingsEditor" timestamp="1584905425361">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

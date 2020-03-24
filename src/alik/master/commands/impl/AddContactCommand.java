@@ -1,6 +1,7 @@
-package alik.master.commands;
+package alik.master.commands.impl;
 
-import alik.master.service.PhoneBook;
+import alik.master.commands.CommandExecution;
+import alik.master.service.PhoneBookService;
 
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class AddContactCommand implements CommandExecution {
         System.out.print("Введите мобильный номер - ");
         phone = input.next();
 
-        if (PhoneBook.addContact(name, surname, phone)) {
+        if (PhoneBookService.addContact(name, surname, phone)) {
             System.out.println("* Контакт добавлен.");
         } else {
             System.out.println("* Заполните все поля правильно!");
