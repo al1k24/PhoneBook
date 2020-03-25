@@ -1,8 +1,11 @@
 package alik.master.commands.impl;
 
 import alik.master.commands.CommandExecution;
+import alik.master.model.Contact;
+import alik.master.service.DataBaseService;
 import alik.master.service.PhoneBookService;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class AddContactCommand implements CommandExecution {
@@ -23,10 +26,13 @@ public class AddContactCommand implements CommandExecution {
         System.out.print("Введите мобильный номер - ");
         phone = input.next();
 
-        if (PhoneBookService.addContact(name, surname, phone)) {
-            System.out.println("* Контакт добавлен.");
-        } else {
-            System.out.println("* Заполните все поля правильно!");
+        try {
+            DataBaseService dbs = new DataBaseService();
+            if (dbs.addContact(new Contact(name, surname, phone))) {
+                System.out.println("* Контакт добавлен.");
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
     }
 }
