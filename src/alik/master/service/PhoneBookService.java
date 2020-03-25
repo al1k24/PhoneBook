@@ -33,19 +33,6 @@ public class PhoneBookService {
         } while (!CommandService.isExitCommand(cmd));
     }
 
-    public static boolean addContact(String name, String surname, String phone) {
-        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty())
-            return false;
-
-        contacts.put(++id, new Contact(name, surname, phone));
-
-        return true;
-    }
-
-    public static boolean removeContact(int id) {
-        return contacts.remove(id) != null;
-    }
-
     public static boolean editContact(int id, int choice, String value) {
         if (value.isEmpty())
             return false;
