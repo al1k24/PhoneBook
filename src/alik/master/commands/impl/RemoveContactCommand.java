@@ -1,9 +1,7 @@
 package alik.master.commands.impl;
 
 import alik.master.commands.CommandExecution;
-import alik.master.model.Contact;
 import alik.master.service.DataBaseService;
-import alik.master.service.PhoneBookService;
 
 import java.sql.SQLException;
 import java.util.Scanner;
