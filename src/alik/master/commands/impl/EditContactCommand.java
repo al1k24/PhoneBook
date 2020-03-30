@@ -1,8 +1,9 @@
 package alik.master.commands.impl;
 
 import alik.master.commands.CommandExecution;
-import alik.master.service.PhoneBookService;
+import alik.master.service.DataBaseService;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class EditContactCommand implements CommandExecution {
@@ -19,11 +20,6 @@ public class EditContactCommand implements CommandExecution {
         }
 
         int id = input.nextInt();
-
-        if (!PhoneBookService.isValidContact(id)) {
-            System.out.println("* Такой контакт не найден!");
-            return;
-        }
 
         String menu = "Выберите действие:\n";
         menu += "1: Изменить имя\n";
@@ -54,11 +50,15 @@ public class EditContactCommand implements CommandExecution {
         System.out.print("Новое значение - ");
 
         input = new Scanner(System.in);
-
-        if (PhoneBookService.editContact(id, choice, input.next())) {
-            System.out.println("* Контакт изменен.");
-        } else {
-            System.out.println("* Что-то пошло не так!");
+        try {
+            DataBaseService dbs = new DataBaseService();
+            if (dbs.editContact(id, choice, input.next())) {
+                System.out.println("* Контакт изменен.");
+            } else {
+                System.out.println("* Что-то пошло не так!");
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
     }
 }
